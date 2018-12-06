@@ -1,6 +1,7 @@
 // Load discord.js
 const Discord = require("discord.js");
 const Commando = require("discord.js-commando");
+const Key = require("dotenv").config();
 // Create a client
 const bot = new Commando.Client();
 
@@ -35,5 +36,6 @@ bot.on("message", function (message) {
 	}
 });
 
-bot.login("NTE5MTE5MDU3NTEzODczNDIy.Duhefg.qisuGsSIH-pz742ELGaL-PF8leA");
+
+bot.login(process.env.token);
 
