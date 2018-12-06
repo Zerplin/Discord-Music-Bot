@@ -21,7 +21,7 @@ class joinCommand extends commando.Command
             {
                 message.member.voiceChannel.join()
                 .then(connection =>{
-                    message.channel.send("joined ");
+                    message.channel.send("joined "+ message.member.voiceChannel.name+" hello "+message.member.voiceChannel.members.toString());
                 })
             }
         }
