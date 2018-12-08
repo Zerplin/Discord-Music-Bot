@@ -2,8 +2,9 @@
 const Discord = require("discord.js");
 const Commando = require("discord.js-commando");
 const Key = require("dotenv").config();
-// Create a client
 const bot = new Commando.Client();
+
+/*
 
 bot.registry.registerGroup("simple", "Simple");
 bot.registry.registerGroup("music", "Music");
@@ -11,6 +12,9 @@ bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
 // This code will run once the bot has started up.
+
+global.server ={};
+
 bot.on("ready", function () {
 	console.log("Ready to begin! Serving in " + bot.channels.length + " channels");
 });
@@ -35,7 +39,20 @@ bot.on("message", function (message) {
 		console.log("pong-ed " + message.author.username);
 	}
 });
+*/
 
 
-bot.login(process.env.token);
+const client = new Discord.Client();
+client.music = require("discord.js-musicbot-addon");
+
+ytKey = process.env.yt_key;
+console.log(ytKey);
+
+client.music.start(client,{
+	
+	youtubeKey: ytKey
+	
+});
+
+client.login(process.env.token);
 

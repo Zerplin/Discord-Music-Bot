@@ -11,9 +11,11 @@
   "dependencies": {
     "discord.js": "^11.4.2",
     "discord.js-commando": "^0.10.0",
+    "discord.js-musicbot-addon": "^13.4.0",
     "dotenv": "^6.2.0",
-    "ffmpeg-binaries": "^3.2.2-3",
     "opusscript": "0.0.6",
-    "ytdl-core": "^0.28.0"
+    "ytdl-core": "^0.28.0",
+    "ytpl": "^0.1.14",
+    "ytsearcher": "^1.2.0"
   }
 }
